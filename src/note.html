@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Notes</title>
+  </head>
+  <body>
+    <div class="side-bar">
+      <button id="return" class="btn">Return to MENU</button>
+      <button id="add-note" class="btn">Add Note</button>
+    </div>
+    <!-- Note form -->
+    <main>
+      <div class="form-container hidden">
+        <form class="note-form">
+          <input
+            type="text"
+            id="note-title"
+            name="note-title"
+            placeholder="Title "
+          />
+          <textarea
+            id="note-body"
+            rows="6"
+            required
+            placeholder="write note ...."
+          ></textarea>
+
+          <input
+            type="text"
+            id="note-category"
+            name="category"
+            placeholder="Add category "
+          />
+          <input
+            type="number"
+            id="book-page"
+            name="book-page"
+            placeholder="page number"
+          />
+          <input
+            type="text"
+            id="book-src"
+            name="book-src"
+            placeholder="Book name"
+          />
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </main>
+
+    <div class="notes-container">
+      <div class="note">
+        <h4 id="title"></h4>
+        <p id="body"></p>
+        <h6 id="category"></h6>
+        <p id="page"></p>
+        <p id="source"></p>
+        <p id="color"></p>
+      </div>
+    </div>
+    <script src="note.js"></script>
+  </body>
+</html>

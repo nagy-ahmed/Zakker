@@ -10,3 +10,6 @@ const openNotes = document.getElementById("open-notes");
 openViewer.addEventListener("click", function () {
   window.location.replace("priview.html");
 });
+openNotes.addEventListener("click", function () {
+  window.location.replace("note.html");
+});

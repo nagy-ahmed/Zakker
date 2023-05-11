@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #555;
+  background-color: #343a40;
   color: rgb(215, 216, 218);
   max-width: 100%;
 }
@@ -39,4 +39,75 @@ body {
   height: 100vh;
   width: 100%;
   background-color: #343a40;
+}
+/* ===================================== */
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #20476d;
+}
+.note {
+  background-color: #656464;
+  width: 80%;
+  border-radius: 12px;
+  margin: 12px;
+}
+/*gdhbgkhl,j;.dhgsahn  */
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.form-container {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+.form-container {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  background-color: inherit;
+  text-align: center;
+  transform: translate(-50%, -50%) scale(1.5);
+  transition: 0.7s ease-in-out;
+  padding: 30px 10px;
+  border-radius: 24px;
+}
+
+form .btn {
+  width: 100%;
+  color: #fff;
+  background-color: #2a46ac;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+.note-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  color: #2a46ac;
+}
+.hidden {
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.3s ease-in-out;
+}
+input,
+textarea {
+  width: auto;
+  max-width: 167px;
+  /* word-wrap: break-word; */
+  word-break: break-all;
 }

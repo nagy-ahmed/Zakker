@@ -28,7 +28,7 @@ const createWindow = function () {
   mainWindow.setTitle("ZAKKER");
   // remove menu bar
   mainWindow.setMenu(null);
-
+  mainWindow.maximize();
   // #########
   // mainWindow.setIcon(iconPth);
 };

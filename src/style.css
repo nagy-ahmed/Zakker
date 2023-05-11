@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #555;
+  color: rgb(215, 216, 218);
+  max-width: 100%;
+}
+.container {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.btn {
+  color: rgb(215, 216, 218);
+  border: 2px solid #485056;
+  width: 50%;
+  padding: 6px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #343a40;
+}
+.pdf-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.side-bar {
+  background-color: #343a40;
+  border-right: 5px solid #485056;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.viewer {
+  height: 100vh;
+  width: 100%;
+  background-color: #343a40;
+}

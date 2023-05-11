@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>ZaKKer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Zakker PDF</h1>
+      <h5>Your notes are safe</h5>
+      <button id="open-viewer" class="btn">Start Reading</button>
+      <button id="open-notes" class="btn">Notes</button>
+    </div>
+    <script defer src="renderer.js"></script>
+  </body>
+</html>

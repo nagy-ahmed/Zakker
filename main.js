@@ -12,6 +12,7 @@ const createWindow = function () {
     // added some options here for my main window
     width: 500,
     height: 500,
+    icon: "logo.ico",
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
       // this is to make nodeJS usable in the browser
@@ -20,8 +21,9 @@ const createWindow = function () {
       enableRemoteModule: true,
     },
   });
+
   // load HTML -> to load the file
-  mainWindow.loadFile(path.join(__dirname, "./src/index.html"));
+  mainWindow.loadFile(path.join(__dirname, "src/index.html"));
   // open devTools -> as we are working only
   mainWindow.webContents.openDevTools();
   // change our title from the main here
@@ -33,6 +35,7 @@ const createWindow = function () {
   // mainWindow.setIcon(iconPth);
 };
 app.on("ready", createWindow);
+
 ipcMain.handle("open-file-dialog", async (event) => {
   const mainWindow = BrowserWindow.getFocusedWindow();
   const result = await dialog.showOpenDialog({

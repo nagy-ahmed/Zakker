@@ -8,6 +8,8 @@ let data = localStorage.getItem("data");
 let openedOrNot = false;
 let viewerElement = document.querySelector(".viewer");
 const container = document.querySelector(".pdf-container");
+
+//three button 
 const openFile = document.getElementById("open");
 const saveFile = document.getElementById("save");
 const returnBtn = document.getElementById("return");
@@ -48,3 +50,29 @@ openFile.addEventListener("click", async function () {
     );
   });
 });
+
+// function highlightText() {
+//   const doc = docViewer.getDocument();
+//   const annotManager = docViewer.getAnnotationManager();
+
+//   // Create a highlight annotation
+//   const highlight = new Annotations.TextHighlightAnnotation();
+//   highlight.PageNumber = 1; // Set the page number where you want to highlight the text
+//   highlight.Quads = []; // Set the quad points for the text to highlight
+//   highlight.Author = annotManager.getCurrentUser();
+//   console.log("hello worlf");
+//   // Add the highlight annotation to the document
+//   annotManager.addAnnotation(highlight);
+//   annotManager.drawAnnotations(highlight.PageNumber);
+// }
+// console.log(highlightText());
+{
+  // // Enable text selection mode
+  // docViewer.setTextSelectionMode();
+  // // Add an event listener for when the text is selected
+  // docViewer.on("selectionChanged", handleSelection);
+  // function handleSelection(e) {
+  //   const selectedText = e.selection;
+  //   console.log("Selected text:", selectedText);
+  // }
+}

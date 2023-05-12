@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <title>Priview page</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="pdf-container">
+    <div class="side-bar">
+      <button id="return" class="btn">Return to MENU</button>
+      <button id="open" class="btn">Open PDF</button>
+      <button id="save" class="btn">Save</button>
+    </div>
+    <div class="viewer"></div>
+  </div>
+
+  <!-- button fixed on the window  -->
+  <script defer src="js/preview.js"></script>
+</body>
+
+</html>

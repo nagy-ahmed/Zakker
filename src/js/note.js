@@ -1,8 +1,7 @@
 let noteContainer = document.querySelector(".notes-container");
-const mainContainer = document.querySelector("main");
+const mainContainer = document.querySelector("body");
 // const formContainer = document.createElement("div");
 const noteTemplate = document.querySelector(".note");
-const returnBtn = document.getElementById("return");
 const addNote = document.getElementById("add-note");
 const formContainer = document.querySelector(".form-container");
 const form = document.querySelector(".note-form");
@@ -61,45 +60,9 @@ class Note {
     this.color = color;
   }
 }
-// ================================================
-// let newNote = new Note(
-//   "Hi title",
-//   "we don't know how to start this code or what should i do ",
-//   "wars",
-//   55,
-//   "egypt",
-//   "#555"
-// );
-// **********
-// const clonedNote = noteTemplate.cloneNode(true);
-
-// clonedNote.classList.remove("hidden");
-
-// note data is the data field i use
-// let noteData = document.getElementById("title");
-// noteData.textContent = newNote.getTitle();
-// noteData = document.getElementById("body");
-// noteData.textContent = newNote.getBody();
-// noteData = document.getElementById("category");
-// noteData.textContent = newNote.getCategory();
-// noteData = document.getElementById("color");
-// noteData.textContent = newNote.getColor();
-// noteData = document.getElementById("page");
-// noteData.textContent = newNote.getPage();
-// noteData = document.getElementById("source");
-// noteData.textContent = newNote.getSource();
-
-// Append the cloned div element to the document
-// noteContainer.appendChild(clonedNote);
-// const jsonNote = JSON.stringify(newNote);
-// console.log(jsonNote);
 
 formContainer.classList.add("form-container");
 mainContainer.appendChild(formContainer);
-
-// const library = [];
-// color;
-// ==================================================
 
 formContainer.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -131,10 +94,6 @@ formContainer.addEventListener("submit", (event) => {
   noteContainer.style.opacity = "1";
 });
 
-// =================================================
-returnBtn.addEventListener("click", () => {
-  window.location.replace("index.html");
-});
 // =================================================
 addNote.addEventListener("click", function () {
   formContainer.classList.remove("hidden");

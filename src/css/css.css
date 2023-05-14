@@ -1634,7 +1634,7 @@ h6 {
 .w3-bar-block .w3-bar-item {
   padding: 20px;
 }
-
+/* edit */
 body,
 html {
   height: 100%;
@@ -1645,6 +1645,7 @@ html {
   min-height: 100%;
   background-position: center;
   background-size: cover;
+  opacity: 0.888;
 }
 
 .w3-top.menu {
@@ -1663,7 +1664,11 @@ html {
   border-color: #e7e7e7;
   color: green;
 }
-
+.premenu {
+  z-index: 2;
+  right: 95px;
+  padding: 0px !important;
+}
 .button {
   display: inline-block;
   padding: 0.5rem 1.5rem;
@@ -1709,4 +1714,97 @@ html {
       width: 100%;
     }
   }
+}
+
+/* notes pages---------------------------------------------------------------- */
+.btn1:link,
+.btn1:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: absolute;
+}
+
+.btn1:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn1:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn1-white {
+  color: #ffffff;
+  font-family: sans-serif;
+  background-color: #81d4fa;
+  font-weight: bold;
+}
+
+.btn1::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn1:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn1-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* preview */
+.last-opened-btn {
+  background-color: #f1f1f100;
+  border-radius: 70px;
+  padding: 5px;
+  width: 70%;
+  color: #fff;
+  font-size: larger;
+  cursor: pointer;
+  justify-content: left;
+  display: flex;
+  padding-left: 18px;
+}
+
+.viewer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+.viewer {
+  height: 100vh;
+  min-height: 100%;
+  width: 100%;
+  background-image: url("../img/hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.888;
 }

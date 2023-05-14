@@ -2,25 +2,47 @@
 <html>
 
 <head>
-  <meta charset="UTF-8" />
-  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
-  <title>Priview page</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <title>ZaKKer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" />
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<style>
+
+</style>
+
+
 </head>
 
 <body>
-  <div class="pdf-container">
-    <div class="side-bar">
-      <button id="return" class="btn">Return to MENU</button>
-      <button id="open" class="btn">Open PDF</button>
-      <button id="save" class="btn">Save</button>
-    </div>
-    <div class="viewer"></div>
-  </div>
+    <div class="pdf-container">
+        <div class="w3-display-topright w3-padding-large w3-xlarge menu premenu" onclick="
+        w3_open()">☰</div>
 
-  <!-- button fixed on the window  -->
-  <script defer src="js/preview.js"></script>
+        <!-- Sidebar (hidden by default)  -->
+        <nav class="w3-display-topright w3-sidebar w3-bar-block w3-card w3-top w3-large w3-animate-right"
+            style="display:none;z-index:3;width:10%;min-width:100px" id="mySidebar">
+            <a class="w3-bar-item w3-button w3-center" href="javascript:void(0)" onclick="w3_close()">&#10006;</a>
+
+            <div class="side-bar">
+                <a id="close" class="btn w3-bar-item w3-button w3-center" onclick="w3_close()">Close Pdf</a>
+                <a id="home" class="btn w3-bar-item w3-button w3-center" onclick="w3_close()">Home</a>
+                <a id="open" class="btn w3-bar-item w3-button w3-center" onclick="w3_close()">Open PDF</a>
+                <a id="notes1" class="btn w3-bar-item w3-button w3-center" onclick="w3_close()">Notes</a>
+            </div>
+        </nav>
+
+
+        <!-- div where pdf viewer appear -->
+        <div class="viewer"></div>
+    </div>
+
+    <script defer src="js/renderer.js"></script>
+    <script src="js/preview.js"></script>
+
 </body>
 
 </html>

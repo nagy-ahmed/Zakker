@@ -6,29 +6,36 @@
 
 // show place of drag and drop only
 const returnhome = document.getElementById("home");
-const openViewer = document.getElementById("open-viewer");
-const openNotes = document.getElementById("open-notes");
-const read = document.getElementById("viewer");
-const Notes = document.getElementById("notes");
+const closePdf = document.getElementById("close");
+const openViewer = document.getElementById("read1");
+const openNotes = document.getElementById("notes1");
+const read = document.getElementById("read2");
+const Notes = document.getElementById("notes2");
+// const test = document.getElementById("test");
+
+// test.addEventListener("click", function () {
+//   window.location.replace("test.html");
+// });
 
 function home() {
   window.location.replace("index.html");
 }
+
 function preview() {
   window.location.replace("preview.html");
 }
 function note() {
-  window.location.replace("note.html");
+  window.location.replace("noteViewer.html");
 }
-//events in side bar
-// home.addEventListener("click", home);
-returnhome.addEventListener("click", home);
-openViewer.addEventListener("click", preview);
-openNotes.addEventListener("click", note);
 
+//events in side bar
+if (returnhome) returnhome.addEventListener("click", home);
+if (closePdf) closePdf.addEventListener("click", preview);
+if (openViewer) openViewer.addEventListener("click", preview);
+if (openNotes) openNotes.addEventListener("click", note);
 //events in buttons in home
-read.addEventListener("click", preview);
-Notes.addEventListener("click", note);
+if (read) read.addEventListener("click", preview);
+if (Notes) Notes.addEventListener("click", note);
 
 // Script to open and close sidebar
 function w3_open() {

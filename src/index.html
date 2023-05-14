@@ -13,15 +13,16 @@
 </head>
 
 <body>
-  <!-- Sidebar (hidden by default) -->
   <div class="w3-display-topright w3-padding-large w3-xlarge menu" style="z-index:2;" onclick="
-  w3_open()">☰</div>
+   w3_open()">☰</div>
+
+  <!-- Sidebar (hidden by default) -->
   <nav class="w3-display-topright w3-sidebar w3-bar-block w3-card w3-top w3-large w3-animate-right"
     style="display:none;z-index:3;width:10%;min-width:100px" id="mySidebar">
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-center">X</a>
+    <a class="w3-bar-item w3-button w3-center" href="javascript:void(0)" onclick="w3_close()">&#10006;</a>
     <a id="home" class="w3-bar-item w3-button w3-center" onclick="w3_close()">Home</a>
-    <a id="open-viewer" class="w3-bar-item w3-button w3-center" onclick="w3_close()">Read</a>
-    <a id="open-notes" class="w3-bar-item w3-button w3-center" onclick="w3_close()">Notes</a>
+    <a id="read1" class="w3-bar-item w3-button w3-center" onclick="w3_close()">Read</a>
+    <a id="notes1" class="w3-bar-item w3-button w3-center" onclick="w3_close()">Notes</a>
   </nav>
 
 
@@ -35,8 +36,8 @@
       <p class="w3-large w3-center">35 days left</p>
       <h1>Welcome to Zakker PDF</h1>
       <h5>Your notes are safe</h5>
-      <a id="viewer" class="w3-button w3-center button">Read</a>
-      <a id="notes" class="w3-button w3-center button">Notes</a>
+      <a id="read2" class="w3-button w3-center button">Read</a>
+      <a id="notes2" class="w3-button w3-center button">Notes</a>
     </div>
 
   </div>

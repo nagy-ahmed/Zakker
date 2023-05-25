@@ -39,11 +39,26 @@
         <form action="#">
           <div class="row title">
             <label>Title</label>
-            <input type="text" spellcheck="false">
+            <input id="title" type="text" spellcheck="false">
           </div>
-          <div class="row description">
-            <label>Description</label>
-            <textarea spellcheck="false"></textarea>
+          <div class="row body">
+            <label>Body</label>
+            <textarea id="body" spellcheck="false"></textarea>
+          </div>
+          <div class="row category">
+            <label>Category</label>
+            <div id="catbox">
+              <input id="category" type="text" spellcheck="false">
+              <input type="color" id="color">
+            </div>
+          </div>
+          <div class="row page">
+            <label>Page</label>
+            <input id="page" type="number" spellcheck="false">
+          </div>
+          <div class="row source">
+            <label>Source</label>
+            <input id="source" type="text" spellcheck="false">
           </div>
           <button></button>
         </form>
@@ -57,7 +72,7 @@
     </li>
   </div>
 
-  <script src="js/script.js"></script>
+  <script src="js/noteViewer.js"></script>
   <script src="js/renderer.js"></script>
 
 </body>

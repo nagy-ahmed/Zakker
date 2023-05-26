@@ -11,11 +11,9 @@ This desktop application is built using Electron.js and PDFTron to provide a pow
 - Recent PDFs: The application keeps track of the last 10 opened PDFs for quick access.
 - Easy navigation: Users can jump to different pages within the PDF file.
 - Zoom and fit options: Zoom in, zoom out, and fit the PDF to the screen as needed.
-- Dark/light mode 
+- Dark/light mode
 - Different anotation features built-in by pdftron
 - Save and export: Users can save annotated PDFs or export them to other formats.
 - Notes are stored at local storage to be used Next if you close the brogram it will be available when you open it again.
 
-
 [Live video of the application functionality](https://drive.google.com/file/d/1uD5uUNbHhXmILIKwUlE1vfuj6QdArbgV/view?usp=sharing)
-

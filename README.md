@@ -1,6 +1,6 @@
 # zakker PDF Viewer with Note-taking Functionality
 
-This desktop application is built using Electron.js and PDFTron to provide a powerful PDF viewing experience with the added functionality of note-taking. It allows users to open PDF files, take notes, and conveniently access their last 10 opened PDFs. This README file provides an overview of the project and explains how to set it up and use it.
+This desktop application is built using Electron.js and PDFTron to provide a powerful PDF viewing experience with the added functionality of note-taking. It allows users to open PDF files, take notes, and conveniently access their last 10 opened PDFs. This README file provides an overview of the project and explains how to set it up and use it..
 
 ## Features
 

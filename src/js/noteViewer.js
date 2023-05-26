@@ -8,9 +8,10 @@ const addBox = document.querySelector(".add-box"),
   pageTag = document.getElementById("page"),
   sourceTag = document.getElementById("source"),
   addBtn = popupBox.querySelector("button");
+colorButtons = document.querySelectorAll(".color-btn");
 
 class Note {
-  constructor(title, body, category, page, source, color = "#6e90a794", date) {
+  constructor(title, body, category, page, source, color = 0, date) {
     this.title = title;
     this.body = body;
     this.category = category;
@@ -64,6 +65,15 @@ class Note {
     this.date = date;
   }
 }
+const colorArray = [
+  "#275be8aa",
+  "#e527e8aa",
+  "#e71f36aa",
+  "#2ce971aa",
+  "#e9e62cb9",
+  "#ecece78a",
+];
+
 const months = [
   "January",
   "February",
@@ -96,13 +106,14 @@ closeIcon.addEventListener("click", () => {
   popupBox.classList.remove("show");
   document.querySelector("body").style.overflow = "auto";
 });
-
 function showNotes() {
   if (!notes) return;
   document.querySelectorAll(".note").forEach((li) => li.remove());
   notes.forEach((note, id) => {
     let filterDesc = note.body.replaceAll("\n", "<br/>");
-    let liTag = `<li class="note" style="background:${note.color} !important">
+    let liTag = `<li class="note" style="background:${
+      colorArray[note.color]
+    } !important">
                           <div class="details">
                               <p>${note.title}</p>
                               <span>${filterDesc}</span>
@@ -115,7 +126,9 @@ function showNotes() {
                               <div class="settings">
                                   <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
                                   <ul class="menu">
-                                      <li onclick="updateNote(${id}, '${note.title}', '${filterDesc}')"><i class="uil uil-pen"></i>Edit</li>
+                                      <li onclick="updateNote(${id}, '${
+      note.title
+    }', '${filterDesc}')"><i class="uil uil-pen"></i>Edit</li>
                                       <li onclick="deleteNote(${id})"><i class="uil uil-trash"></i>Delete</li>
                                   </ul>
                               </div>
@@ -136,8 +149,8 @@ function showMenu(elem) {
 }
 
 function deleteNote(noteId) {
-  let confirmDel = confirm("Are you sure you want to delete this note?");
-  if (!confirmDel) return;
+  // let confirmDel = confirm("Are you sure you want to delete this note?");
+  // if (!confirmDel) return;
   notes.splice(noteId, 1);
   localStorage.setItem("notes", JSON.stringify(notes));
   showNotes();
@@ -153,16 +166,20 @@ function updateNote(noteId, title, filterDesc) {
   popupTitle.innerText = "Update a Note";
   addBtn.innerText = "Update Note";
 }
-
+let c = 0;
+window.addEventListener("click", (e) => {
+  if (e.target.classList.contains("color-btn")) {
+    c = e.target.getAttribute("data-value");
+  }
+});
 addBtn.addEventListener("click", (e) => {
   e.preventDefault();
-
   let title = titleTag.value.trim(),
     body = bodyTag.value.trim(),
     category = catTag.value.trim(),
     page = pageTag.value.trim(),
+    color = c,
     source = sourceTag.value.trim();
-
   if (title || body) {
     let currentDate = new Date(),
       month = months[currentDate.getMonth()],
@@ -176,11 +193,13 @@ addBtn.addEventListener("click", (e) => {
       category,
       page,
       source,
-      document.getElementById("color").value,
+      color,
       `${month} ${day}, ${year}`
     );
+
     if (!isUpdate) {
       notes.push(noteInfo);
+      c = 0;
     } else {
       isUpdate = false;
       notes[updateId] = noteInfo;

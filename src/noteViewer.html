@@ -1,80 +1,144 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Notes</title>
+    <link rel="stylesheet" href="css/noteViewerStyle.css" />
+    <link rel="stylesheet" href="css/css.css" />
 
-<head>
-  <meta charset="utf-8">
-  <title>Notes</title>
-  <link rel="stylesheet" href="css/noteViewerStyle.css">
-  <link rel="stylesheet" href="css/css.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Iconscout Link For Icons -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Iconscout Link For Icons -->
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-</head>
+  <body>
+    <!-- Sidebar -->
+    <div
+      style="
+        padding-top: 10px;
+        margin-bottom: 70px;
+        display: flex;
+        justify-content: center;
+      "
+    >
+      <div
+        class="w3-display-topright w3-padding-large w3-xlarge menu"
+        style="z-index: 2"
+        onclick="w3_open()"
+      >
+        ☰
+      </div>
+      <!-- Sidebar (hidden by default)  -->
+      <nav
+        class="w3-display-topright w3-sidebar w3-bar-block w3-card w3-top w3-large w3-animate-right"
+        style="display: none; z-index: 3; width: 10%; min-width: 100px"
+        id="mySidebar"
+      >
+        <a
+          class="w3-bar-item w3-button w3-center"
+          href="javascript:void(0)"
+          onclick="w3_close()"
+          >&#10006;</a
+        >
+        <a
+          id="home"
+          class="w3-bar-item w3-button w3-center"
+          onclick="w3_close()"
+          >Home</a
+        >
+        <a
+          id="read1"
+          class="w3-bar-item w3-button w3-center"
+          onclick="w3_close()"
+          >Read</a
+        >
+        <a
+          id="notes1"
+          class="w3-bar-item w3-button w3-center"
+          onclick="w3_close()"
+          >Notes</a
+        >
+      </nav>
+    </div>
 
-<body>
-
-  <!-- Sidebar -->
-  <div style="padding-top: 10px;margin-bottom: 70px;display: flex;justify-content: center;">
-    <div class=" w3-display-topright w3-padding-large w3-xlarge menu" style="z-index:2;" onclick="w3_open()">☰</div>
-    <!-- Sidebar (hidden by default)  -->
-    <nav class="w3-display-topright w3-sidebar w3-bar-block w3-card w3-top w3-large w3-animate-right"
-      style="display:none;z-index:3;width:10%;min-width:100px" id="mySidebar">
-      <a class="w3-bar-item w3-button w3-center" href="javascript:void(0)" onclick="w3_close()">&#10006;</a>
-      <a id="home" class="w3-bar-item w3-button w3-center" onclick="w3_close()">Home</a>
-      <a id="read1" class="w3-bar-item w3-button w3-center" onclick="w3_close()">Read</a>
-      <a id="notes1" class="w3-bar-item w3-button w3-center" onclick="w3_close()">Notes</a>
-    </nav>
-
-
-  </div>
-
-  <div class="popup-box">
-    <div class="popup">
-      <div class="content">
-        <header>
-          <p></p>
-          <i class="uil uil-times"></i>
-        </header>
-        <form action="#">
-          <div class="row title">
-            <label>Title</label>
-            <input id="title" type="text" spellcheck="false">
-          </div>
-          <div class="row body">
-            <label>Body</label>
-            <textarea id="body" spellcheck="false"></textarea>
-          </div>
-          <div class="row category">
-            <label>Category</label>
-            <div id="catbox">
-              <input id="category" type="text" spellcheck="false">
-              <input type="color" id="color">
+    <div class="popup-box">
+      <div class="popup">
+        <div class="content">
+          <header>
+            <p></p>
+            <i class="uil uil-times"></i>
+          </header>
+          <form action="#">
+            <div class="row title">
+              <label>Title</label>
+              <input id="title" type="text" spellcheck="false" />
             </div>
-          </div>
-          <div class="row page">
-            <label>Page</label>
-            <input id="page" type="number" spellcheck="false">
-          </div>
-          <div class="row source">
-            <label>Source</label>
-            <input id="source" type="text" spellcheck="false">
-          </div>
-          <button></button>
-        </form>
+            <div class="row body">
+              <label>Body</label>
+              <textarea id="body" spellcheck="false"></textarea>
+            </div>
+            <div class="row category">
+              <label>Category</label>
+              <div id="catbox">
+                <input id="category" type="text" spellcheck="false" />
+              </div>
+              <div class="colors-cat">
+                <div
+                  class="color-btn"
+                  data-value="0"
+                  style="background-color: #275be8aa"
+                ></div>
+                <div
+                  class="color-btn"
+                  data-value="1"
+                  style="background-color: #e527e8aa"
+                ></div>
+                <div
+                  class="color-btn"
+                  data-value="2"
+                  style="background-color: #e71f36aa"
+                ></div>
+                <div
+                  class="color-btn"
+                  data-value="3"
+                  style="background-color: #2ce971aa"
+                ></div>
+                <div
+                  class="color-btn"
+                  data-value="4"
+                  style="background-color: #e9e62cb9"
+                ></div>
+                <div
+                  class="color-btn"
+                  data-value="5"
+                  style="background-color: #ecece78a"
+                ></div>
+              </div>
+            </div>
+            <div class="row page">
+              <label>Page</label>
+              <input id="page" type="number" spellcheck="false" />
+            </div>
+            <div class="row source">
+              <label>Source</label>
+              <input id="source" type="text" spellcheck="false" />
+            </div>
+            <button></button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="wrapper">
-    <li class="add-box">
-      <div class="icon"><i class="uil uil-plus"></i></div>
-      <p>Add new note</p>
-    </li>
-  </div>
+    <div class="wrapper">
+      <li class="add-box">
+        <div class="icon"><i class="uil uil-plus"></i></div>
+        <p>Add new note</p>
+      </li>
+    </div>
 
-  <script src="js/noteViewer.js"></script>
-  <script src="js/renderer.js"></script>
-
-</body>
-
+    <script src="js/noteViewer.js"></script>
+    <script src="js/renderer.js"></script>
+  </body>
 </html>

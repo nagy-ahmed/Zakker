@@ -156,6 +156,7 @@ header,
   z-index: 2;
   height: 100%;
   width: 100%;
+  /* max-height: 700px; */
   background: rgba(0, 0, 0, 0.4);
 }
 .popup-box .popup {
@@ -268,4 +269,17 @@ input[type="color"] {
   outline: none;
   padding: 0px;
   margin: 0px;
+}
+/* ----------------------- */
+.colors-cat {
+  margin-top: 10px;
+  display: flex;
+  gap: 2px;
+}
+.color-btn {
+  cursor: pointer;
+  padding: 5%;
+  margin-top: 3;
+  width: 18%;
+  border-radius: 50px;
 }

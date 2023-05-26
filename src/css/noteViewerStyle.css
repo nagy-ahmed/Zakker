@@ -181,7 +181,7 @@ header,
   pointer-events: auto;
 }
 .popup-box.show .popup {
-  transform: translate(-50%, -50%) scale(.85);
+  transform: translate(-50%, -50%) scale(0.8);
 }
 .popup .content {
   border-radius: 5px;

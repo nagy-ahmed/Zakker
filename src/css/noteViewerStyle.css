@@ -164,7 +164,7 @@ header,
   left: 50%;
   z-index: 3;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   justify-content: center;
   transform: translate(-50%, -50%) scale(0.95);
 }
@@ -180,7 +180,7 @@ header,
   pointer-events: auto;
 }
 .popup-box.show .popup {
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(.85);
 }
 .popup .content {
   border-radius: 5px;

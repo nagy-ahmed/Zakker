@@ -25,7 +25,7 @@ const createWindow = function () {
   // load HTML -> to load the file
   mainWindow.loadFile(path.join(__dirname, "src/index.html"));
   // open devTools -> as we are working only
-  // mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
   // change our title from the main here
   mainWindow.setTitle("ZAKKER");
   // remove menu bar

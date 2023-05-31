@@ -93,7 +93,7 @@ header,
 }
 .note span {
   display: block;
-  color: #575757;
+  color: #423f3f;
   font-size: 16px;
   margin-top: 5px;
 }
@@ -102,7 +102,7 @@ header,
   border-top: 1px solid #ccc;
 }
 .bottom-content span {
-  color: #6d6d6d;
+  color: #423f3f;
   font-size: 14px;
 }
 .bottom-content .settings {

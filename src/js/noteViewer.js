@@ -128,7 +128,9 @@ function showNotes() {
                                   <ul class="menu">
                                       <li onclick="updateNote(${id}, '${
       note.title
-    }', '${filterDesc}')"><i class="uil uil-pen"></i>Edit</li>
+    }', '${filterDesc}','${note.category}','${note.page}',('${note.source}','${
+      note.color
+    }'))"><i class="uil uil-pen"></i>Edit</li>
                                       <li onclick="deleteNote(${id})"><i class="uil uil-trash"></i>Delete</li>
                                   </ul>
                               </div>
@@ -155,14 +157,18 @@ function deleteNote(noteId) {
   localStorage.setItem("notes", JSON.stringify(notes));
   showNotes();
 }
-
-function updateNote(noteId, title, filterDesc) {
+function updateNote(noteId, title, filterDesc, category, page, source, color) {
   let body = filterDesc.replaceAll("<br/>", "\r\n");
   updateId = noteId;
   isUpdate = true;
   addBox.click();
   titleTag.value = title;
   bodyTag.value = body;
+  console.log(color);
+  console.log(page);
+  catTag.value = category;
+  pageTag.value = page;
+  sourceTag.value = source;
   popupTitle.innerText = "Update a Note";
   addBtn.innerText = "Update Note";
 }

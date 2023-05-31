@@ -185,7 +185,8 @@ async function showNotesFromDataBase() {
 
 function showNotes() {
   if (navigator.onLine) {
-    showNotesFromDataBase();
+    // showNotesFromDataBase();
+    showNotesFromLocal();
   } else {
     showNotesFromLocal();
   }
@@ -296,9 +297,9 @@ function addNotesToLocal() {
 }
 addBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log("la3k yousif");
   if (navigator.onLine) {
-    addNotesToDataBase();
+    // addNotesToDataBase();
+    addNotesToLocal();
   } else {
     addNotesToLocal();
   }
